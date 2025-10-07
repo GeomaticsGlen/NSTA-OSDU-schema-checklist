@@ -1,5 +1,5 @@
 # NSTA-OSDU-schema-checklist
-This is my attempt to ingest components of the North Sea Transition Authority's (NSTA) Open Data into The Open Subsurface Data Universe (OSDU). Seems pretty fundamental, to me....
+This is my attempt to ingest components of the North Sea Transition Authority's (NSTA) Open Data into The Open Subsurface Data Universe (OSDU). Seems pretty fundamental, to me.... This is a first pass summary generated with my own guidance for reference - links will be provided to actual reality when available.
 
 # 🛠️ OSDU Schema Checklist for NSTA Field Mapping
 
