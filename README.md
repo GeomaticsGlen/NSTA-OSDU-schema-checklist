@@ -173,27 +173,51 @@ Use the links below to jump to each section:
 - All links prefer the official OSDU repo at [community.opengroup.org](https://community.opengroup.org/osdu/data/data-definitions/)
 - This checklist is designed to support ingestion, validation, and Swagger/OpenAPI flattening
 
-### NOTES Supplimental — OSDU Required Components Missing from NSTA
+## 🧠 Notes
 
-| OSDU Field         | Purpose / Notes                                      | OSDU Schema File         | .json URL | .md URL | OSDU Schema |
-|--------------------|------------------------------------------------------|---------------------------|-----------|---------|-------------|
-| id                 | Unique record identifier (UUID)                      | All master/work schemas   | Required by OSDU core | N/A | Y |
-| kind               | Schema type and version (e.g., `osdu:master-data:Well:1.0.0`) | All schemas | Required by OSDU core | N/A | Y |
-| acl                | Access control list (who can read/write)             | All schemas               | Required by OSDU core | N/A | Y |
-| legal              | Legal tags, data governance                          | All schemas               | Required by OSDU core | N/A | Y |
-| data               | Container for actual business fields                 | All schemas               | Required by OSDU core | N/A | Y |
-| meta               | Metadata about ingestion, versioning                | All schemas               | Required by OSDU core | N/A | Y |
-| createTime         | Timestamp when record was created                    | All schemas               | N/A       | N/A     | Y |
-| modifyTime         | Timestamp when record was last updated               | All schemas               | N/A       | N/A     | Y |
-| version            | Version number of the record                         | All schemas               | N/A       | N/A     | Y |
-| SurfaceLocation    | GeoJSON point or polygon for surface location        | Well.1.0.0.json           | [Link](https://community.opengroup.org/osdu/data/data-definitions/-/blob/master/Generated/master-data/Well.1.0.0.json) | [Link](https://community.opengroup.org/osdu/data/data-definitions/-/blob/master/E-R/master-data/Well.1.0.0.md) | Y |
-| BottomHoleLocation | GeoJSON point for bottom hole                        | Wellbore.1.4.0.json       | [Link](https://community.opengroup.org/osdu/data/data-definitions/-/blob/master/Generated/master-data/Wellbore.1.4.0.json) | [Link](https://community.opengroup.org/osdu/data/data-definitions/-/blob/master/E-R/master-data/Wellbore.1.1.0.md) | Y |
-| SpatialExtent      | Bounding box or polygon for wells/fields             | *Field.1.0.0.json*        | N/A       | N/A     | N |
-| ReferenceDatumType.1.0.0.json | Validates vertical measurement datum types | *ReferenceDatumType.1.0.0.json* | N/A | N/A | N |
-| ReferenceSidetrackType.1.0.0.json | Validates sidetrack type values       | *ReferenceSidetrackType.1.0.0.json* | N/A | N/A | N |
-| ReferenceLicenceType.1.0.0.json | Validates licence type values          | *ReferenceLicenceType.1.0.0.json* | N/A | N/A | N |
-| ReferenceWellboreIntentType.1.0.0.json | Validates wellbore intent values | *ReferenceWellboreIntentType.1.0.0.json* | N/A | N/A | N |
----
+- Fields marked with *italic schema names* are not yet available in OSDU and may need to be scaffolded.
+- All links prefer the official OSDU repo at [community.opengroup.org](https://community.opengroup.org/osdu/data/data-definitions/)
+- This checklist is designed to support ingestion, validation, and Swagger/OpenAPI flattening.
+
+### 📌 Missing Reference Schemas
+
+| Suggested Schema Name                     | Purpose / Usage                                  | Present in OSDU? |
+|-------------------------------------------|--------------------------------------------------|------------------|
+| *ReferenceDatumType.1.0.0.json*           | Validates vertical measurement datum types       | ❌ No            |
+| *ReferenceSidetrackType.1.0.0.json*       | Validates sidetrack type values                  | ❌ No            |
+| *ReferenceLicenceType.1.0.0.json*         | Validates licence type values                    | ❌ No            |
+| *ReferenceWellboreIntentType.1.0.0.json*  | Validates wellbore intent values                 | ❌ No            |
+| *ReferenceDevelopmentType.1.0.0.json*     | Classifies development types                     | ❌ No            |
+| *ReferenceParentRole.1.0.0.json*          | Describes relationship to parent wellbore        | ❌ No            |
+| *ReferenceOperator.1.0.0.json*            | Identifies operators across well/reservoir/licence| ❌ No            |
+| *ReferenceGeologicalAge.1.0.0.json*       | Captures geological age at TD                    | ❌ No            |
+| *ReferenceFluidType.1.0.0.json*           | Classifies fluid types                           | ❌ No            |
+| *ReferenceFlowClass.1.0.0.json*           | Classifies flow behavior                         | ❌ No            |
+| *ReferenceOtherClass.1.0.0.json*          | Captures other classification types              | ❌ No            |
+| *ReferenceWellConventionality.1.0.0.json* | Indicates conventional/unconventional status     | ❌ No            |
+| *ReferenceUnconventionalWellType.1.0.0.json* | Details unconventional well types              | ❌ No            |
+| *ReferenceTemperatureClass.1.0.0.json*    | Classifies temperature regimes                   | ❌ No            |
+| *ReferencePressureClass.1.0.0.json*       | Classifies pressure regimes                      | ❌ No            |
+| *ReferenceFacilityType.1.0.0.json*        | Classifies facility types                        | ❌ No            |
+| *ReferenceFacilityStatus.1.0.0.json*      | Tracks facility operational status               | ❌ No            |
+| *ReferenceFacilityMobility.1.0.0.json*    | Indicates fixed/mobile facility status           | ❌ No            |
+| *WellInformation.1.0.0.json*              | Container for well-level metadata                | ❌ No            |
+| *Platform.1.0.0.json*                     | Describes offshore/onshore platform              | ❌ No            |
+| *Facility.1.0.0.json*                     | Describes processing or production facility      | ❌ No            |
+| *Reservoir.1.0.0.json*                    | Describes reservoir entity                       | ❌ No            |
+| *Field.1.0.0.json*                        | Describes field entity                           | ❌ No            |
+
+➡️ [View Testing Outcomes and Refinements](testing.md)
+This page documents the validation process, schema refinements, ingestion results, and next steps for aligning NSTA data with OSDU requirements.
+
+## ✅ Current Status
+
+_(Add your notes here)_
+
+## 🔧 Refinement Tasks
+
+_(Add your checklist or action items here)_
+
 
 ## 📣 Contributions
 
