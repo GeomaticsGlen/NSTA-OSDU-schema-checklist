@@ -173,6 +173,26 @@ Use the links below to jump to each section:
 - All links prefer the official OSDU repo at [community.opengroup.org](https://community.opengroup.org/osdu/data/data-definitions/)
 - This checklist is designed to support ingestion, validation, and Swagger/OpenAPI flattening
 
+### NOTES Supplimental — OSDU Required Components Missing from NSTA
+
+| OSDU Field         | Purpose / Notes                                      | OSDU Schema File         | .json URL | .md URL | OSDU Schema |
+|--------------------|------------------------------------------------------|---------------------------|-----------|---------|-------------|
+| id                 | Unique record identifier (UUID)                      | All master/work schemas   | Required by OSDU core | N/A | Y |
+| kind               | Schema type and version (e.g., `osdu:master-data:Well:1.0.0`) | All schemas | Required by OSDU core | N/A | Y |
+| acl                | Access control list (who can read/write)             | All schemas               | Required by OSDU core | N/A | Y |
+| legal              | Legal tags, data governance                          | All schemas               | Required by OSDU core | N/A | Y |
+| data               | Container for actual business fields                 | All schemas               | Required by OSDU core | N/A | Y |
+| meta               | Metadata about ingestion, versioning                | All schemas               | Required by OSDU core | N/A | Y |
+| createTime         | Timestamp when record was created                    | All schemas               | N/A       | N/A     | Y |
+| modifyTime         | Timestamp when record was last updated               | All schemas               | N/A       | N/A     | Y |
+| version            | Version number of the record                         | All schemas               | N/A       | N/A     | Y |
+| SurfaceLocation    | GeoJSON point or polygon for surface location        | Well.1.0.0.json           | [Link](https://community.opengroup.org/osdu/data/data-definitions/-/blob/master/Generated/master-data/Well.1.0.0.json) | [Link](https://community.opengroup.org/osdu/data/data-definitions/-/blob/master/E-R/master-data/Well.1.0.0.md) | Y |
+| BottomHoleLocation | GeoJSON point for bottom hole                        | Wellbore.1.4.0.json       | [Link](https://community.opengroup.org/osdu/data/data-definitions/-/blob/master/Generated/master-data/Wellbore.1.4.0.json) | [Link](https://community.opengroup.org/osdu/data/data-definitions/-/blob/master/E-R/master-data/Wellbore.1.1.0.md) | Y |
+| SpatialExtent      | Bounding box or polygon for wells/fields             | *Field.1.0.0.json*        | N/A       | N/A     | N |
+| ReferenceDatumType.1.0.0.json | Validates vertical measurement datum types | *ReferenceDatumType.1.0.0.json* | N/A | N/A | N |
+| ReferenceSidetrackType.1.0.0.json | Validates sidetrack type values       | *ReferenceSidetrackType.1.0.0.json* | N/A | N/A | N |
+| ReferenceLicenceType.1.0.0.json | Validates licence type values          | *ReferenceLicenceType.1.0.0.json* | N/A | N/A | N |
+| ReferenceWellboreIntentType.1.0.0.json | Validates wellbore intent values | *ReferenceWellboreIntentType.1.0.0.json* | N/A | N/A | N |
 ---
 
 ## 📣 Contributions
