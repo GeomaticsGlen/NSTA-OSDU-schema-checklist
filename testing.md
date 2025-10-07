@@ -3,8 +3,9 @@
 This page documents the validation process, schema refinements, ingestion results, and next steps for aligning NSTA data with OSDU requirements.
 
 ## ✅ Current Status
-**👤 Human Delivered**
-REALITY CHECK - had my AI correctly identified these as missing....?
+# 👤 Human Delivered
+
+#REALITY CHECK - has my AI correctly identified these as missing....?
 ## 🧠 Notes
 
 - Fields marked with *italic schema names* are not yet available in OSDU and may need to be scaffolded.
