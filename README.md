@@ -44,6 +44,37 @@ This project provides a complete mapping between **NSTA “New Field Names”** 
   In some cases, extending OSDU schemas or creating ingestion manifests tailored to NSTA data may be the most practical route.
 
 
+  USING jonslo's Clone of the OSDU Gitlab Data Defintions.
+
+#Controlled Fields
+
+Well.1.4.0.json
+
+| Field Name              | Reference Type                     | Reference JSON File                                                                 |
+|-------------------------|------------------------------------|--------------------------------------------------------------------------------------|
+| status                  | reference-data--WellStatus         | [WellStatus.1.0.0.json](https://github.com/jonslo/osdu-data-data-definitions/blob/master/ReferenceValues/WellStatus.1.0.0.json) |
+| wellType                | reference-data--WellType           | [WellType.1.0.0.json](https://github.com/jonslo/osdu-data-data-definitions/blob/master/ReferenceValues/WellType.1.0.0.json) |
+| purpose                 | reference-data--WellPurpose        | [WellPurpose.1.0.0.json](https://github.com/jonslo/osdu-data-data-definitions/blob/master/ReferenceValues/WellPurpose.1.0.0.json) |
+| alias[].kind            | reference-data--AliasKind          | [AliasKind.1.0.0.json](https://github.com/jonslo/osdu-data-data-definitions/blob/master/ReferenceValues/AliasKind.1.0.0.json) |
+| fieldReference          | master-data--Field                 | [Field.1.3.0.json](https://github.com/jonslo/osdu-data-data-definitions/blob/master/SchemaRegistrationResources/shared-schemas/osdu/master-data/Field.1.3.0.json) |
+| facilityReference       | master-data--Facility              | [Facility.1.3.0.json](https://github.com/jonslo/osdu-data-data-definitions/blob/master/SchemaRegistrationResources/shared-schemas/osdu/master-data/Facility.1.3.0.json) |
+| operatorReference       | master-data--Organization          | [Organization.1.3.0.json](https://github.com/jonslo/osdu-data-data-definitions/blob/master/SchemaRegistrationResources/shared-schemas/osdu/master-data/Organization.1.3.0.json) |
+| countryReference        | master-data--GeoPoliticalArea      | [GeoPoliticalArea.1.0.0.json](https://github.com/jonslo/osdu-data-data-definitions/blob/master/SchemaRegistrationResources/shared-schemas/osdu/master-data/GeoPoliticalArea.1.0.0.json) |
+
+
+Wellbore.1.5.1.json
+| Field Name         | Reference Type                     | Reference JSON File                                                                 |
+|--------------------|------------------------------------|--------------------------------------------------------------------------------------|
+| status             | reference-data--WellboreStatus     | [WellboreStatus.1.0.0.json](https://github.com/jonslo/osdu-data-data-definitions/blob/master/ReferenceValues/WellboreStatus.1.0.0.json) |
+| wellType           | reference-data--WellboreType       | [WellboreType.1.0.0.json](https://github.com/jonslo/osdu-data-data-definitions/blob/master/ReferenceValues/WellboreType.1.0.0.json) |
+| purpose            | reference-data--WellborePurpose    | [WellborePurpose.1.0.0.json](https://github.com/jonslo/osdu-data-data-definitions/blob/master/ReferenceValues/WellborePurpose.1.0.0.json) |
+| alias[].kind       | reference-data--AliasKind          | [AliasKind.1.0.0.json](https://github.com/jonslo/osdu-data-data-definitions/blob/master/ReferenceValues/AliasKind.1.0.0.json) |
+| facilityReference  | master-data--Facility              | [Facility.1.3.0.json](https://github.com/jonslo/osdu-data-data-definitions/blob/master/SchemaRegistrationResources/shared-schemas/osdu/master-data/Facility.1.3.0.json) |
+| fieldReference     | master-data--Field                 | [Field.1.3.0.json](https://github.com/jonslo/osdu-data-data-definitions/blob/master/SchemaRegistrationResources/shared-schemas/osdu/master-data/Field.1.3.0.json) |
+| operatorReference  | master-data--Organization          | [Organization.1.3.0.json](https://github.com/jonslo/osdu-data-data-definitions/blob/master/SchemaRegistrationResources/shared-schemas/osdu/master-data/Organization.1.3.0.json) |
+| trajectoryReference| master-data--Trajectory            | [Trajectory.1.3.0.json](https://github.com/jonslo/osdu-data-data-definitions/blob/master/SchemaRegistrationResources/shared-schemas/osdu/master-data/Trajectory.1.3.0.json) |
+| wellReference      | master-data--Well                  | [Well.1.4.0.json](https://github.com/jonslo/osdu-data-data-definitions/blob/master/SchemaRegistrationResources/shared-schemas/osdu/master-data/Well.1.4.0.json) |
+
 
 ➡️ [View Testing Outcomes and Refinements](testing.md)
 This page documents the validation process, schema refinements, ingestion results, and next steps for aligning NSTA data with OSDU requirements.
