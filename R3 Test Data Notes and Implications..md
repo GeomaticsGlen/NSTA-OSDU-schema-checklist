@@ -72,4 +72,3 @@ open-test-data\rc--3.0.0\readme
 
 The README is telling you: _don’t treat these JSONs as isolated examples_. They are **interdependent**, and your environment must be configured to accept them “as‑is” — partitions, legal tags, ACLs, reference values, schemas — otherwise you’re not really testing OSDU compliance.
 
-Would you like me to lay out a **step‑by‑step bootstrap sequence** (exact Bruno requests in the right order: reference values → legal tags → schemas → records) so you can mirror the repo’s intended load order locally? That would give you a reproducible “R3 data load” pipeline.
